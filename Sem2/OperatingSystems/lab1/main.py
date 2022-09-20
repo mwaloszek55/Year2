@@ -1,6 +1,5 @@
 """
 Name = Mateusz Waloszek
-Student Number = 120412764
 """
 
 
