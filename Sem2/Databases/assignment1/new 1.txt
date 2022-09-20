@@ -1,0 +1,122 @@
+db.school.insertOne(
+	{
+	course: 
+	[
+	{course_name: "Intro to Computer Science"
+	course_number: "CS1310",
+	credit_hours: 4,
+	department: "CS"},
+	
+	{course_name: "Data Structures",
+	course_number: "CS3320",
+	credit_hours: 4,
+	department: "CS"},
+	
+	{course_name: "Discrete Mathematics",
+	course_number: "MATH2410",
+	credit_hours: 3,
+	department: "MATH"},
+	
+	{course_name: "Database", 
+	course_number: "CS3380",
+	credit_hours: 3,
+	department: "CS"}
+	],
+	
+	student: 
+	[
+	{name: "Smith",
+	student_number: 17,
+	class: 1,
+	major: "CS"},
+	
+	{name: "Brown",
+	student_number: 8,
+	class: 2,
+	major: "CS"}
+	],
+	
+	section: 
+	[
+	{section_id: 85,
+	course_number: "MATH2410",
+	semester: "Fall",
+	year: 07,
+	instructor: "King"},
+	
+	{section_id: 92,
+	course_number: "CS1310",
+	semester: "Fall",
+	year: 07,
+	instructor: "Anderson"},
+	
+	{section_id:, 102
+	course_number: "3320",
+	semester: "Spring",
+	year: 08,
+	instructor: "Knuth"},
+	
+	{section_id: 112,
+	course_number: "MATH2410",
+	semester: "Fall",
+	year: 08,
+	instructor: "Chang"},
+	
+	{section_id: 119,
+	course_number: "CS1310",
+	semester: "Fall",
+	year: 08,
+	instructor: "Anderson"},
+	
+	{section_id: 135,
+	course_number: "CS3380",
+	semester: "Fall",
+	year: 08,
+	instructor: "Stone"}
+	],
+	
+	grade_report: 
+	[
+	{student_number: 17, 
+	section_id: 112,
+	grade: B },
+	
+	{student_number: 17,
+	section_id: 119,
+	grade: C},
+	
+	{student_number: 8,
+	section_id: 85,
+	grade: A},
+	
+	{student_number: 8,
+	section_id: 92,
+	grade: A},
+	
+	{student_number: 8,
+	section_id: 102,
+	grade: B},
+	
+	{student_number: 8,
+	section_id: 135,
+	grade: A}
+	],
+	
+	prerequisite: 
+	[
+	{course_number: "CS3380",
+	prerequisite_number: "CS3320"},
+	
+	{course_number: "CS3380",
+	prerequisite_number: "MATH2410"},
+	
+	{course_number: "CS3320",
+	prerequisite_number: "CS1310"}
+
+	]
+	
+	}
+)
+
+
+

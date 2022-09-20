@@ -1,0 +1,35 @@
+db.student.aggregate([
+   {
+    $lookup:{
+        from: "course",
+        localField: "major",
+        foreignField: "department",
+        as: "student_courses"
+       }
+	},
+	
+	{
+    $lookup:
+        {
+        from: "grade_report",
+        localField: "student_number",
+        foreignField: "student_number",
+        as: "student_grades"
+        }
+	},
+	
+    {
+    $match:{
+        $and[{"student_number" : "student_number"}]
+        }
+    },
+	
+    {
+      $project:{
+      name: 1,
+      course_name: 1,
+      grade: 1,
+      }
+      }
+    }
+]).pretty()

@@ -1,0 +1,24 @@
+The difference between TCP and UDP sockets in Python:
+TCP sockets need to have a connection between the server and a client.
+UDP sockets do not have a connection between server and a client.
+
+This means that TCP sockets wait for Clients to connect to them and exchange Data, this Data travels right through the connection established,
+and the address for the Client is also established upon connection creation.
+Meanwhile, UDP sockets wait for data from Clients to arrive, the data that arrives is a mix of the message a client sends and the clients address.
+The UDP socket then uses that client address to SEND a response back to the client.
+
+
+
+In general programming, TCP requires a connection in order for the protocol to work and UDP requires no connection.
+A very key difference between the two is their speed since TCP is radically slower than UDP. 
+In general, UDP is a lot faster, easier and more efficient as a protocol.
+However, TCP has the ability to re-gain lost data packets.
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+
+cpu(queue):
+	for process in queue:
+		if I/O operation does not interrupt:
+			if time of process execution > time slice of queue:
+				time of process execution -= time slice of queue
+				remove process from queue and add to a queue of a priority +1 up until last queue.
+				if nextqueue != last queue:
+					cpu(nextqueue)
+				else:
+					idle()
+			else:
+				remove process
+				if nextqueue != last queue:
+					cpu(nextqueue)
+				else:
+					idle()
+		else:
+			time of process execution -= arrival time of I/O
+			processState= blocked
+			if process priority != 0
+				process priority -= 1
+			execute I/O for the time I/O takes to execute by CPU
+			processState =  unblocked
+			if previousqueue != 0:
+				cpu(previousqueue)
+			else:
+				cpu(queue)
+		
+		
+				
+				
+#used to save power			
+idle():	
+	#complete some random process for e.g.:
+	print("idle")

@@ -1,0 +1,14 @@
+db.courses.insertOne(
+	{course_name: "Intro to Computer Science",
+	course_number: "CS1310", 
+	credit_hours: 4,
+	department: "CS"
+	}
+)
+
+
+db.prerequisite.insertOne(
+	{course_number: "CS3380",
+	prerequisite_number: "CS3320"
+	}
+)

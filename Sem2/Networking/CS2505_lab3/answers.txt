@@ -1,0 +1,19 @@
+PROBLEMS:
+1 - My client.py connected to the server but instead receiving the correct response from the server
+	it received "404 Not Found".
+	The message I sent with the GET request was incorrect, and the server wasn't getting the filename, 
+	therefore, the server couldn't read from the file and an exception occurred.
+	
+	
+2 - Then, my client ONLY received "HTTP/1.1 200 OK".
+	My server had an issue with iterating over the loop that sends the client the actual GET response wanted from the client(HTML body)
+	My fix for this was creating a "while: True" loop that infinitely iterates and receives messages from the server until no more data is sent from the server.
+	It seems as though the connection was closed as soon as "HTTP/1.1 200 OK" was received, and that was not the end of data needed to be sent.
+
+3 - When concatenating the string received from the server in the "while True" loop and decoding I was given an type error.
+	Both variables needed to be in "bytes" instead of string
+	My fix for this was to make the response variable a bytes type:  response = b""
+	
+4 - I didn't know how to add input commands to the command that starts the client script,
+	i.e. the "server_host server_port filename" part of "client.py server_host server_port filename"
+	My solution was to import sys, and assign these 3 to individual variables using the "sys.argv" method

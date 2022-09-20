@@ -1,0 +1,104 @@
+Name : Mateusz Waloszek
+ID : 120412764
+
+
+1.
+db.school.insertMany([
+	{
+	"student": {
+		"Smith": {
+			"id": 17, 
+			"class" : 1, 
+			"major" : "CS",
+			"grades": {"Intro_to_Computer_Science": "C", "Discrete_Mathematics": "B"}
+		},
+		
+		"Brown": {
+			"id": 8, 
+			"class" : 2, 
+			"major" : "CS",
+			"grades": {"Intro_to_Computer Science": "C", "Discrete_Mathematics": "A", "Data_Structures":"B", "Database":"A"}
+			}
+		},
+	"courses": {
+		"Intro_to_Computer Science": {
+			"id": "CS1310",
+			"yr07": {"Fall" : {"Brown":"A"}},
+			"yr08": {"Fall" : {"Smith":"C"}},
+			"credit_hrs" : "4",
+			"prerequisites" : "None"
+		},
+		
+		"Discrete_Mathematics": {
+			"id": "MATH2410",
+			"yr07": {"Fall" : {"Brown":"A"}},
+			"yr08": {"Fall" : {"Smith":"B"}},
+			"credit_hrs" : "3",
+			"prerequisites" : "None"
+		},
+		
+		"Data_Structures": {
+			"id": "CS3320",
+			"yr07": {"Spring" : {"Brown":"B"}},
+			"credit_hrs" : "4",
+			"prerequisites" : "Intro_to_Computer Science"
+		},
+		
+		"Database": {
+			"id": "CS3380",
+			"yr08": {"Fall" : {"Brown":"A"}},
+			"credit_hrs" : "3",
+			"prerequisites" : ["Data_Structures", "Discrete_Mathematics"]
+		}
+		},
+	"section": {
+		"id85": {
+			"instructor" : "King",
+			"semester" : "Fall",
+			"course" : "MATH2410",
+			"yr" : "07"
+		},
+		"id92": {
+			"instructor" : "Anderson",
+			"semester" : "Fall",
+			"course" : "CS1310",
+			"yr" : "07"
+		},
+		"id102": {
+			"instructor" : "Knuth",
+			"semester" : "Spring",
+			"course" : "CS3320",
+			"yr" : "08"
+		},
+		"id112": {
+			"instructor" : "Chang",
+			"semester" : "Fall",
+			"course" : "MATH2410",
+			"yr" : "08"
+		},
+		"id119": {
+			"instructor" : "Anderson",
+			"semester" : "Fall",
+			"course" : "CS1310",
+			"yr" : "08"
+		},
+		"id135": {
+			"instructor" : "Stone",
+			"semester" : "Fall",
+			"course" : "CS3380",
+			"yr" : "08"
+		}
+						
+	}
+		
+	}
+	]
+	);
+	
+2. db.school.findOne().student.Smith.grades
+
+
+3. db.school.findOne().courses.Database.yr08.Fall
+
+
+4. db.school.findOne().courses.Database.prerequisites
