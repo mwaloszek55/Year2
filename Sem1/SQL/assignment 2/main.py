@@ -3,10 +3,10 @@ import pymysql
 
 def mysqlconnect():
 
-    connection = pymysql.Connect(host='cs1.ucc.ie',
-            user='mw17', 
-            password ="wivie",
-            db='cs2208_mw17')
+    connection = pymysql.Connect(host='hostname',
+            user='user', 
+            password ="pass",
+            db='db')
 
     with connection:
         with connection.cursor() as cursor:          
